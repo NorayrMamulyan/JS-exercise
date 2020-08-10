@@ -14,6 +14,13 @@
     height: 663px;
 }
 
+.container,
+.img,
+.title,
+.container p {
+    transition: all 1s;
+}
+
 .container {
     position: absolute;
     display: inline-block;
@@ -21,27 +28,33 @@
     -webkit-box-shadow: 2px 2px 3px 2px #888888;
     box-shadow: 2px 2px 3px 2px #888888;
     border-radius: 10px;
+    background-color: white;
     overflow: hidden;
     height: 278px;
     width: 160px;
     text-align: center;
     cursor: pointer;
+    z-index: 99;
 }
 
 h4 {
     border-bottom: 1px solid gray;
     margin: 3px 7px 12px 7px;
-    font-size:16px;
 }
 
 .container2 {
     left: 400px;
+    z-index: 1;
 }
 
 .img {
     display: block;
     position: relative;
-    width: 160px;
+    height: 90px;
+}
+
+.imgBot {
+    height: 0px !important;
 }
 
 .container p {
@@ -52,7 +65,7 @@ h4 {
     user-select: none;
     overflow: hidden;
     line-height: 1;
-    height: 112px;
+    max-height: 160px;
     font-size: 14px;
     color: #888888;
     margin: auto 5px;
@@ -65,7 +78,11 @@ h4 {
     border-bottom: 2px solid black;
     width: 236px;
     left: 162px;
-    margin-top: 136px;
-    top: 136px;
+    top: 272px;
     text-align: center;
+    z-index: 0;
+}
+
+.rotating {
+    transform: rotate(180deg) translate(0px, -27px);
 }
